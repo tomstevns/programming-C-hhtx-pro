@@ -1,24 +1,28 @@
-# f = 3x
 
-def integration(f,n,l,p,pr): # Variablerne er funktionskonstanten, opløsningen (n), øvre grænse (l), potens, hvorvidt mellemregninger skal printes.
+
+def integration(konstant,resolution,upperBorderValue,p,pr): # Variablerne er konstant, opløsningen (resolution), øvre grænse (upperBorderValue), potens, hvorvidt mellemregninger skal printes.
     areal = 0
+    numberOfRangeCount = (resolution*upperBorderValue)
+    print("numberOfRangeCount is: ",numberOfRangeCount)
+ #   for i in range(numberOfRangeCount):
+    for i in range(numberOfRangeCount):
 
-    for i in range(n*l):
-        interval = 1/n
-        x = i / n
-        y = f * pow(x,p)
+        interval = 1/resolution
+#        x = i / resolution
+        x = (i+1) / resolution
+        y = konstant * pow(x,p)
         a = y * interval
 
         areal = areal + a
         if pr == 1:
-            print(a)
+            print("Summeret areal for i= ",i," X=",x," er: ",a)
 
     print(areal)
 
-f = int(input("Indtast konstant "))
-n = int(input("Indtast opløsning "))
-l = int(input("Indtast ydre grænse "))
-p = int(input("Indtast potens "))
-pr = int(input("Vil du have mellemregninger printet? 1 for Ja, 0 for Nej "))
+konstant = int(input("Indtast konstant som du ganger f(x) med: "))
+resolution = int(input("Indtast opløsning: "))
+upperBorderValue = int(input("Indtast ydre grænse: "))
+p = int(input("Indtast potens: "))
+pr = int(input("Vil du have mellemregninger printet? \n1 for Ja, 0 for Nej "))
 
-integration(f,n,l,p,pr)
+integration(konstant, resolution, upperBorderValue, p, pr)
