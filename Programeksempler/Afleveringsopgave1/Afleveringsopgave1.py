@@ -5,6 +5,8 @@ Opgaverne stilles med udgangspunkt i de øvelser vi har gennemgået i lektionern
 Opgavernes sværhedsgrad  stiger løbende og skal derfor prmært løses med den "Opgave 1" først,
 men det er for såvidt op til dig selv, hvilken rækkefølge du vil løse dem i.
 
+Jeg har vedlagt en python fil "Afleveringsopgave1.py" hvor opgaverne skal programmeres ind i.
+
 Du skal gå igang med at løse opgaverne i den kommende uge41's lektioner,
 hvor vi allesammen skal hjælpe hinanden med at nå så godt i mål som muligt :o)
 
