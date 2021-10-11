@@ -15,8 +15,8 @@ for p in range(len(spamWords)):
 
 
 
-testMail1 = "Dette er en testmeail "
-testMail2 = "Dette er en testmeail hvor du har vundet 500 kr - tillykke"
+testMail1 = "Dette er en testmail "
+testMail2 = "Dette er en testmaill hvor du har vundet 500 kr - tillykke"
 #lav teststreng med inputfil eller index af mange filer
 
 spamwordsfound = 0
