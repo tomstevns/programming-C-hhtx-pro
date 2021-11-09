@@ -40,7 +40,7 @@ Måske er Opgave 1 allerede lavet!!!!!!
 """Opgave 1:
 - lav en funktion som hedder beregnModulus(heltal,modulusværdi)
 - funktionen skal gøre følgende
-    - beregn modulus ud fra heltal og modulusværdi og m
+    - beregn modulus ud fra heltal og modulusværdi
     - print resultat
     -returner resulat
     
