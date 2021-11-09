@@ -31,6 +31,7 @@ class TestTheExercisesForAfleveringsopgave1(unittest.TestCase):
         self.assertEqual(Afleveringsopgave2.gangTalMed7(2.25),15.75)
         #Tester at strenge ikke kan håndteres
         self.assertNotEqual(Afleveringsopgave2.gangTalMed7("10"),70)
+        self.assertRaises().e
 
 
 
