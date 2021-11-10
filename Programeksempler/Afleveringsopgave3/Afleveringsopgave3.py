@@ -113,10 +113,10 @@ test funktion med følgende kode:
 
 #teste funktion med filen opgave2.fasta
 
-findAntalStartCodonATGIFil("TGA",opgave2.fasta) #Start Codon
-findAntalStartCodonATGIFil("TAG",opgave2.fasta) #Stop  Codon
-findAntalStartCodonATGIFil("TAA",opgave2.fasta) #Stop  Codon
-findAntalStartCodonATGIFil("TGA",opgave2.fasta) #Stop  Codon
+findAntalCodonIFil("TGA",opgave2.fasta) #Start Codon
+findAntalCodonIFil("TAG",opgave2.fasta) #Stop  Codon
+findAntalCodonIFil("TAA",opgave2.fasta) #Stop  Codon
+findAntalCodonIFil("TGA",opgave2.fasta) #Stop  Codon
 """
 
 """Opgave 6:
