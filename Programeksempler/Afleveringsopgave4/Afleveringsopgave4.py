@@ -75,9 +75,22 @@ Element ved lige indekspositioner fra liste to
 
 Udskrivning Endelig tredje liste
 [6, 12, 18, 4, 12, 20, 28]
+"""
+
+"""
+Opgave6: Fjern og tilføj element på en liste
+Skriv et program for at fjerne emnet, der findes i indeks 4, og tilføj det til 2. position og i slutningen af ​​listen.
 
 
+Givet:
 
+liste1 = [54, 44, 27, 79, 91, 41]
+Forventet output:
 
+Liste Efter fjernelse af element ved indeks 4 [34, 54, 67, 89, 43, 94]
+Liste efter tilføjelse af element ved indeks 2 [34, 54, 11, 67, 89, 43, 94]
+Liste efter tilføjelse af element til sidst [34, 54, 11, 67, 89, 43, 94, 11]
 
+Hint:
+Brug listemetoderne pop(), insert() og append()
 """
