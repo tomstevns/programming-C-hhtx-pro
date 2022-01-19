@@ -20,14 +20,14 @@ try/exeption blocks implemented below
 
 
 try:
-    connection = sqlite3.connect('chinook.db')
+    connection = sqlite3.connect('bakterie.db')
     print('connection succesfull')
 except:
     print('connection error')
 
 
 
-def createTable():
+def createTable_bakterie_typer():
     # SQL command to create a table in the database
     sql_command = """CREATE TABLE bakterie_typer ( 
     prøve_nummer INTEGER PRIMARY KEY, 
@@ -47,9 +47,19 @@ def createTable():
     type14 VARCHAR(1));"""
     return sql_command
 
+
+def createTable_prøver():
+    # SQL command to create a table in the database
+    sql_command = """CREATE TABLE prøver ( To be implemented);"""
+    return sql_command
+
+
+
+
 def insertIntoTable():
     # SQL command to insert the data in the table
-    sql_command = """INSERT INTO bakterie_typer VALUES (1, "x","","","x","x","x","x","x","x","x","x","x","x","x",    );"""
+    sql_command = """INSERT INTO bakterie_typer VALUES (5, "","","","","","x","x","x","x","x","x","x","x","x");
+    """
     crsr.execute(sql_command)
 
 
@@ -101,7 +111,7 @@ def fetchAll():
 #Now You are ready to create a SQL command, as a python string
 # that soon will be fired against the chinook database
 
-# cursor
+#cursor
 crsr = connection.cursor()
 
 # print statement will execute if there
@@ -112,7 +122,7 @@ print("Connected to the database")
 # execute the statement
 
 try:
-    crsr.execute(createTable())
+    crsr.execute(createTable_bakterie_typer())
 except:
     print("Maybe table is already created")
 
@@ -120,16 +130,6 @@ try:
     insertIntoTable()
 except:
     print("Maybe something is already inserted")
-"""try:
-    insertingDataInputByTheUser()
-except:
-    print("Maybe something is already inserted")
-"""
-
-
-
-
-
 
 
 fetchAll()
