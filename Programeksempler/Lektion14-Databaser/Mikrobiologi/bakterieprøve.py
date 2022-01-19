@@ -1,13 +1,3 @@
-"""
-Dear ZBC-HTX-Programming teams(B/C),
-
-I've recently started a python assignment which uses the chinook database.
-The assignment that I'm stuck on is figuring out which album is listened to most.
-Then, I need to write print the top 10 results with the name of the album and the artist,
-and the number of times a track is played on the album.
-Also, i need to fit all this into one query.
-My attempt includes using PyCharm-EDU as IDE:
-"""
 
 #connection
 """The sqlite3 package below has to be installed by yourself, 
@@ -39,24 +29,29 @@ except:
 
 def createTable():
     # SQL command to create a table in the database
-    sql_command = """CREATE TABLE emp ( 
-    staff_number INTEGER PRIMARY KEY, 
-    fname VARCHAR(20), 
-    lname VARCHAR(30), 
-    gender CHAR(1), 
-    joining DATE);"""
+    sql_command = """CREATE TABLE bakterie_typer ( 
+    prøve_nummer INTEGER PRIMARY KEY, 
+    type1 VARCHAR(1),
+    type2 VARCHAR(1),
+    type3 VARCHAR(1),
+    type4 VARCHAR(1),
+    type5 VARCHAR(1),
+    type6 VARCHAR(1),
+    type7 VARCHAR(1),
+    type8 VARCHAR(1),
+    type9 VARCHAR(1),
+    type10 VARCHAR(1),
+    type11 VARCHAR(1),
+    type12 VARCHAR(1),
+    type13 VARCHAR(1),
+    type14 VARCHAR(1));"""
     return sql_command
 
 def insertIntoTable():
     # SQL command to insert the data in the table
-    sql_command = """INSERT INTO emp VALUES (23, "Rishabh",\
-    "Bansal", "M", "2014-03-28");"""
+    sql_command = """INSERT INTO bakterie_typer VALUES (1, "x","","","x","x","x","x","x","x","x","x","x","x","x",    );"""
     crsr.execute(sql_command)
 
-    # another SQL command to insert the data in the table
-    sql_command = """INSERT INTO emp VALUES (1, "Bill", "Gates",\
-    "M", "1980-10-28");"""
-    crsr.execute(sql_command)
 
     # To save the changes in the files. Never skip this.
     # If we skip this, nothing will be saved in the database.
@@ -90,7 +85,7 @@ def insertingDataInputByTheUser():
 def fetchAll():
     print("into fetchAll()")
     # execute the command to fetch all the data from the table emp
-    crsr.execute("SELECT * FROM emp")
+    crsr.execute("SELECT * FROM bakterie_typer")
 
     # store all the fetched data in the ans variable
     ans = crsr.fetchall()
@@ -125,11 +120,11 @@ try:
     insertIntoTable()
 except:
     print("Maybe something is already inserted")
-try:
+"""try:
     insertingDataInputByTheUser()
 except:
     print("Maybe something is already inserted")
-
+"""
 
 
 
