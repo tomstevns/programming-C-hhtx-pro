@@ -9,3 +9,19 @@ with open('skylningsforsøg_med_kommaer.csv', 'r') as read_obj:
         for row in csv_reader:
             # row variable is a list that represents a row in csv
             print(row)
+            sqlcommand = "INSERT INTO bakterie_typer(" + row[0] +","\
+            + row[1] +","\
+            + row[2] +","\
+            + row[3] +","\
+            + row[4] +","\
+            + row[5] +","\
+            + row[6] +","\
+            + row[7] +","\
+            + row[8] +","\
+            + row[9] +","\
+            + row[10] +","\
+            + row[11] +","\
+            + row[12] +","\
+            + row[13] +","\
+            + row[14]+")"
+            print("sqlcommand =" , sqlcommand)
