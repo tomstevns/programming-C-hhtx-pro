@@ -44,13 +44,13 @@ def createTable_bakterie_typer():
     type11 VARCHAR(1),
     type12 VARCHAR(1),
     type13 VARCHAR(1),
-    type14 VARCHAR(1));"""
+    type14 VARCHAR(1)),"""
     return sql_command
 
 
 def createTable_prøver():
     # SQL command to create a table in the database
-    sql_command = """CREATE TABLE prøver ( To be implemented);"""
+    sql_command = """CREATE TABLE prøver ( To be implemented),"""
     return sql_command
 
 
@@ -58,7 +58,7 @@ def createTable_prøver():
 
 def insertIntoTable():
     # SQL command to insert the data in the table
-    sql_command = """INSERT INTO bakterie_typer VALUES (5, "","","","","","x","x","x","x","x","x","x","x","x");
+    sql_command = """INSERT INTO bakterie_typer VALUES (5, "","","","","","x","x","x","x","x","x","x","x","x"),
     """
     crsr.execute(sql_command)
 
