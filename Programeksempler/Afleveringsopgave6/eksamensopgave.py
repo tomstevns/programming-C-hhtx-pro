@@ -1,13 +1,8 @@
 import numpy as np
 import pandas as pd
-import csv
+import matplotlib.pyplot as plt
 
-#initialize array
-A = np.array([170,175,175,180,180,180,180,185,185,190])
 
-aFile = "100records.csv"
-stdDevFile = "stdDevFile.txt"
-nostdDevFile = "no_stdDevFile.txt"
 
 def stddev(myarray):
     #compute standard deviation
@@ -19,16 +14,18 @@ def stddev(myarray):
 def getIdFromRecords(myfile):
     df = pd.read_csv(myfile,sep=';',usecols=["id"])
     print(df.get("id"))
+    return df
 
 def getHeightFromRecords(myfile):
     df = pd.read_csv(myfile,sep=';',usecols=["height"])
     print(df.get("height"))
+    return df
 
 def getHeightWithIdFromRecords(myfile,id):
     df = pd.read_csv(myfile,sep=';',usecols=["height"])
     heights = df.get("height")
     print("height with id=", id, "is ",heights[id])
-
+    return df
 def getCompleteDataFrameFromRecords(myfile):
     completedf = pd.read_csv(myfile,sep=';',usecols=["id","height","text"])
     print(completedf.get("id"))
@@ -40,11 +37,13 @@ def getCompleteDataFrameFromRecords(myfile):
 def getTextFromRecords(myfile):
     df = pd.read_csv(myfile,sep=';',usecols=["text"])
     print(df.get("text"))
+    return df
 
 def getColumnFromRecords(myfile,columnName):
     """This function has two inputs both the filename and the column to inpect"""
     df = pd.read_csv(myfile,sep=';',usecols=[columnName])
     print(df.get(columnName))
+    return df
 
 def getStdDevFromHeightInRecords(myfile):
     df = pd.read_csv(myfile,sep=';',usecols=["height"])
@@ -91,10 +90,19 @@ def saveAllRecordsWithHeightsInsideStdDevToCSV(dataframe,stddevfile,stddev, mean
     file.close()
     nfile.close()
 
+def plotHistoGram(dataframe):
+    plt.hist(dataframe)
+    plt.show()
+
 
 ###################
 #  TESTING BELOW  #
 ###################
+#initialize array
+A = np.array([170,175,175,180,180,180,180,185,185,190])
+aFile = "100records.csv"
+stdDevFile = "stdDevFile.txt"
+nostdDevFile = "no_stdDevFile.txt"
 
 
 print("Standardafvigelsen er: ",stddev(A))
@@ -116,3 +124,6 @@ getHeightWithIdFromRecords(aFile,3)
 completeDF = getCompleteDataFrameFromRecords(aFile)
 saveAllRecordsWithHeightsInsideStdDevToCSV(completeDF,stdDevFile,stdDevValue,meanValue)
 
+df_heights = getHeightFromRecords(aFile)
+
+plotHistoGram(df_heights)
