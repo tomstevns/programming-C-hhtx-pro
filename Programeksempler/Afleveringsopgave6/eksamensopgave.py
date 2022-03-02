@@ -7,6 +7,7 @@ A = np.array([170,175,175,180,180,180,180,185,185,190])
 
 aFile = "100records.csv"
 stdDevFile = "stdDevFile.txt"
+nostdDevFile = "no_stdDevFile.txt"
 
 def stddev(myarray):
     #compute standard deviation
@@ -79,13 +80,16 @@ def saveAllRecordsWithHeightsInsideStdDevToCSV(dataframe,stddevfile,stddev, mean
     print("height with id=", 0, "is ",heights[0])
 
     file = open(stddevfile, "a")
+    nfile = open(nostdDevFile, "a")
     for i in range(len(heights)):
         if heightInsideStandardDevitation(stddev,mean,heights[i]):
             file.write(str(dataframe.iloc[i]) + "\n\n")
             print("YES")
         else:
+            nfile.write(str(dataframe.iloc[i]) + "\n\n")
             print("NO")
     file.close()
+    nfile.close()
 
 
 ###################
