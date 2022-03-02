@@ -1,3 +1,4 @@
+import sys
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -12,9 +13,13 @@ def stddev(myarray):
 
 
 def getIdFromRecords(myfile):
-    df = pd.read_csv(myfile,sep=';',usecols=["id"])
-    print(df.get("id"))
-    return df
+    try:
+        df = pd.read_csv(myfile,sep=';',usecols=["id"])
+        print(df.get("id"))
+        return df
+    except:
+        print("Oops!", sys.exc_info()[0].__class__, "occurred.")
+        return sys.exc_info()[0]
 
 def getHeightFromRecords(myfile):
     df = pd.read_csv(myfile,sep=';',usecols=["height"])

@@ -9,6 +9,9 @@ import eksamensopgave
 
 class TestsForEksamensopgave(unittest.TestCase):
 
+    aFile = "100records.csv"
+    stdDevFile = "stdDevFile.txt"
+    nostdDevFile = "no_stdDevFile.txt"
 
     def test_gangTalMed7(self):
         #tester om 7*10 = 70
@@ -27,6 +30,8 @@ class TestsForEksamensopgave(unittest.TestCase):
         self.assertEqual(eksamensopgave.stddev(A),5.477225575051661)
         self.assertNotEqual(eksamensopgave.stddev(A),5.477225575051662)
 
+    def test_getIdFromRecords(self):
+        self.__class__(FileNotFoundError,eksamensopgave.getIdFromRecords("noexistfile"))
 
 
 if __name__ == '__main__':
