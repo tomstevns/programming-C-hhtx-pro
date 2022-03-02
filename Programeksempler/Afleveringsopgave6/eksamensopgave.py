@@ -94,10 +94,20 @@ def plotHistoGram(dataframe):
     plt.hist(dataframe)
     plt.show()
 
+def gangTalMed7(inputTal):
+    #printer input
+    print("input tal er: ", inputTal)
+    #ganger input med 7
+    resultat = inputTal*7
+    #printer resultat
+    print("resultat er: ", resultat)
+    #funktionen gangTalMed7() returnerer resultat
+    return resultat
 
-###################
-#  TESTING BELOW  #
-###################
+
+##############################
+#  Functional TESTING BELOW  #
+##############################
 #initialize array
 A = np.array([170,175,175,180,180,180,180,185,185,190])
 aFile = "100records.csv"
