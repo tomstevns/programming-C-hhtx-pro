@@ -81,9 +81,7 @@ def saveAllRecordsWithHeightsInsideStdDevToCSV(dataframe,stddevfile,stddev, mean
     file = open(stddevfile, "a")
     for i in range(len(heights)):
         if heightInsideStandardDevitation(stddev,mean,heights[i]):
-            print("befor write4")
-            file.write(str(dataframe.iloc[i]))
-            print("befor write5")
+            file.write(str(dataframe.iloc[i]) + "\n\n")
             print("YES")
         else:
             print("NO")
