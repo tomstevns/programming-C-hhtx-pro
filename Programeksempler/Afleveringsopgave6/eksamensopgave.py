@@ -120,24 +120,24 @@ stdDevFile = "stdDevFile.txt"
 nostdDevFile = "no_stdDevFile.txt"
 
 
-print("Standardafvigelsen er: ",stddev(A))
-getIdFromRecords(aFile)
-getHeightFromRecords(aFile)
-getTextFromRecords(aFile)
-getColumnFromRecords(aFile,"height")
+#print("Standardafvigelsen er: ",stddev(A))
+#getIdFromRecords(aFile)
+#getHeightFromRecords(aFile)
+#(aFile)
+#getColumnFromRecords(aFile,"height")
 
 stdDevValue = getStdDevFromHeightInRecords(aFile)
 meanValue = getMeanFromHeightInRecords(aFile)
 
-heightInsideStandardDevitation(stdDevValue,meanValue,180)
+#heightInsideStandardDevitation(stdDevValue,meanValue,180)
 
-getHeightWithIdFromRecords(aFile,0)
-getHeightWithIdFromRecords(aFile,1)
-getHeightWithIdFromRecords(aFile,2)
-getHeightWithIdFromRecords(aFile,3)
+#getHeightWithIdFromRecords(aFile,0)
+#getHeightWithIdFromRecords(aFile,1)
+#getHeightWithIdFromRecords(aFile,2)
+#getHeightWithIdFromRecords(aFile,3)
 
-completeDF = getCompleteDataFrameFromRecords(aFile)
-saveAllRecordsWithHeightsInsideStdDevToCSV(completeDF,stdDevFile,stdDevValue,meanValue)
+#completeDF = getCompleteDataFrameFromRecords(aFile)
+#saveAllRecordsWithHeightsInsideStdDevToCSV(completeDF,stdDevFile,stdDevValue,meanValue)
 
 df_heights = getHeightFromRecords(aFile)
 
