@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 def stddev(myarray):
     #compute standard deviation
-    output = np.std(A)
+    output = np.std(myarray)
     #print(output)
     return output
 
@@ -120,14 +120,14 @@ stdDevFile = "stdDevFile.txt"
 nostdDevFile = "no_stdDevFile.txt"
 
 
-#print("Standardafvigelsen er: ",stddev(A))
+print("Standardafvigelsen er: ",stddev(A))
 #getIdFromRecords(aFile)
 #getHeightFromRecords(aFile)
 #(aFile)
 #getColumnFromRecords(aFile,"height")
 
-stdDevValue = getStdDevFromHeightInRecords(aFile)
-meanValue = getMeanFromHeightInRecords(aFile)
+#stdDevValue = getStdDevFromHeightInRecords(aFile)
+#meanValue = getMeanFromHeightInRecords(aFile)
 
 #heightInsideStandardDevitation(stdDevValue,meanValue,180)
 
@@ -139,6 +139,6 @@ meanValue = getMeanFromHeightInRecords(aFile)
 #completeDF = getCompleteDataFrameFromRecords(aFile)
 #saveAllRecordsWithHeightsInsideStdDevToCSV(completeDF,stdDevFile,stdDevValue,meanValue)
 
-df_heights = getHeightFromRecords(aFile)
+#df_heights = getHeightFromRecords(aFile)
 
-plotHistoGram(df_heights)
+#plotHistoGram(df_heights)
