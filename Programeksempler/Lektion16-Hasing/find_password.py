@@ -8,14 +8,10 @@ def getPasswordFromRecords(myfile):
 
 def getPasswordFromExcel(myfile):
     df = pd.read_excel(myfile,sheet_name='Navne', usecols="A")
-
-
     fourLettersDF = pd.DataFrame(columns=['names'])
     fiveLettersDF = pd.DataFrame(columns=['names'])
-
     counter4 = 0
     counter5 = 0
-
 
     for i in range(len(df)):
         navn = df.iloc[i]['Navn']
@@ -33,8 +29,6 @@ def getPasswordFromExcel(myfile):
 
     for b in range(len(fiveLettersDF)):
         print(fiveLettersDF.iloc[b]['names'])
-
-
     return df
 
 def getPasswordWithLengthFromExcel(myfile,pwlength):
